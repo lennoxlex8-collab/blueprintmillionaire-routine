@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Millionaire Routine Tracker</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Millionaire Routine Tracker — Full Upgrade</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Millionaire Routine Tracker</h1>
-  <div id="task-list"></div>
-  <button id="addTaskBtn">Add Task</button>
+  <div class="app">
+    <header>
+      <h1>Road to 1M — Daily Checklist & Planner</h1>
+      <div class="controls">
+        <button id="exportBtn">Export JSON</button>
+        <button id="resetBtn">Reset All</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="column">
+        <div class="card">
+          <h2>Daily Millionaire Routine</h2>
+          <div id="dailyList" class="task-list"></div>
+        </div>
+
+        <div class="card">
+          <h2>Trading — Daily Checklist</h2>
+          <div id="tradingDaily" class="task-list"></div>
+        </div>
+
+        <div class="card">
+          <h2>Reading Timetable (Daily)</h2>
+          <div id="readingList" class="task-list"></div>
+        </div>
+      </section>
+
+      <section class="column">
+        <div class="card">
+          <h2>Trading — Weekly Planner</h2>
+          <div id="tradingWeekly" class="weekly-grid"></div>
+        </div>
+
+        <div class="card">
+          <h2>Dropshipping 2025 Launch Calendar</h2>
+          <div id="dropship" class="task-list"></div>
+        </div>
+
+        <div class="card">
+          <h2>Financial Tracker</h2>
+          <div class="tracker">
+            <label>Target capital (R): <input id="targetCapital" type="number" value="15000" /></label>
+            <label>Current savings (R): <input id="currentSavings" type="number" value="0" /></label>
+            <div id="savingsProgress" class="progress"><div class="bar"></div></div>
+            <div id="savingsText" class="small"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Streak & Notes</h2>
+          <div>Current Streak: <span id="streakCount">0</span></div>
+          <textarea id="dailyNotes" placeholder="Journal / trade notes"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Files saved locally in your browser. You can export JSON and upload to GitHub or Firebase later.</small>
+    </footer>
+  </div>
 
   <script type="module" src="app.js"></script>
 </body>
